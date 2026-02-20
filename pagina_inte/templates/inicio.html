@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquila por siempre</title>
+    <link rel="stylesheet" href="font-icons/all.min.css">
+    <link rel="stylesheet" href="font-icons/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="estilos/hola.css">
+    <link rel="icon" href="img/isono.jpg" type="jpg">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="curved-shape"></div>
+        <div class="curved-shape2"></div>
+        <div class="form-box Login">
+
+            <h2 class="animation" style="--D:0; --S:21">Iniciar Sesion</h2>
+            <form action="#">
+                <div class="input-box animation" style="--D:1; --S:22">
+                    <input type="text" required />
+                    <label for="">Nombre de usuario:</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box animation" style="--D:2; --S:23">
+                    <input type="password" required />
+                    <label for="">Contraseña:</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="input-box animation" style="--D:3; --S:24">
+                    <button class="btn" type="submit"><a href="menu.html">Iniciar sesion</a></button>
+                </div>
+                <div class="regi-link animation" style="--D:4; --S:25">
+                    <p>No tienes cuenta ? <a href="registro.html" class="SignUpLink">Registrarse</a></p>
+                </div>
+            </form>
+        </div><!--Cierre del contenedor-->
+
+        <div class="info-content Login">
+            <h2 class="animation" style="--D:0; --S:20">BIENVENIDO</h2>
+            <p class="animation" style="--D:1; --S:21">A Maqui park.</p>
+
+        </div>
+            <img src="img/logopack2.png" alt="" srcset="" class="img">
+        <div class="form-box Signup">
+            <h2 class="animation" style="--li:17; --S:0">Registrarse</h2>
+            <form action="#" method="post">
+                <div class="input-box animation" style="--li:18; --S:1">
+                    <input type="text" name="nombre"  required />
+                    <label for="">Nombre de usuario:</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                 
+                <div class="input-box animation" style="--li:23; --S:25">
+                
+                    <input type="tel"
+                     id="telefono" 
+                     name="telefono" 
+                     inputmode="numeric" pattern="[0-9]{10}"
+                     minlength="10" 
+                     maxlength="10" 
+                     title="Ingresa exactamente 10 dígitos numéricos" required />
+                    
+                     <label for="telefono">Número de teléfono:</label>
+                    
+                     <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="input-box animation" style="--li:19; --S:1">
+                    <input type="email" name="correo" required />
+                    <label for="">Correo:</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="input-box animation" style="--li:20; --S:2">
+                    <input type="password" name="password" required />
+                    <label for="">Contraseña:</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="input-box animation" style="--li:21; --S:3">
+                    <button class="btn" type="submit">Registrarse</button>
+                </div>
+                <div class="regi-link animation" style="--li:22; --S:4">
+                    <p>Ya creaste tu cuenta ? <a href="#" class="SignInLink">ir a iniciar sesion</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="info-content Signup">
+            <h2 class="animation" style="--li:17; --S:0">Unete a nosotros?</h2>
+            <p class="animation" style="--li:18; --S:1">Registrarse en la pagina de Maquipark.</p>
+        </div>
+    </div>
+    <script src="script/mina.js"></script>
+</body>
+
+</html>
