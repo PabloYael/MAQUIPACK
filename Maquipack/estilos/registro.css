@@ -1,0 +1,126 @@
+ *{
+        box-sizing:border-box;
+    }
+
+    body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:#e6e6e6;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        padding:20px;
+    }
+
+    .container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:60px;
+        width:100%;
+        max-width:1000px;
+    }
+
+    .logo-section{
+        text-align:center;
+    }
+
+    .logo-section img{
+        width:180px;
+        max-width:100%;
+    }
+
+    .logo-section h2{
+        color:#1e73be;
+        letter-spacing:2px;
+        margin-top:10px;
+    }
+
+    .form-section{
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        width:100%;
+        max-width:350px;
+        text-align:center;
+    }
+
+    .form-section h1{
+        margin-bottom:20px;
+        font-weight:900;
+    }
+
+    form{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    input{
+        padding:12px;
+        border:none;
+        border-radius:8px;
+        color:white;
+        font-size:14px;
+        background: linear-gradient(90deg, #4b0082, #1e73be);
+        outline:none;
+    }
+
+    input::placeholder{
+        color:white;
+    }
+
+    button{
+        padding:12px;
+        border-radius:8px;
+        border:2px solid #4b0082;
+        background:white;
+        font-weight:bold;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#4b0082;
+        color:white;
+    }
+
+    .login-link{
+        margin-top:15px;
+        font-size:12px;
+    }
+
+    .login-link span{
+        color:red;
+        cursor:pointer;
+        font-weight:bold;
+    }
+
+    .error{
+        color:red;
+        font-size:12px;
+    }
+
+    .success{
+        color:green;
+        font-size:14px;
+    }
+
+    /* 📱 RESPONSIVE PARA CELULAR */
+    @media (max-width: 768px){
+        .container{
+            flex-direction:column;
+            gap:30px;
+        }
+
+        .logo-section img{
+            width:140px;
+        }
+
+        .form-section{
+            width:100%;
+            max-width:100%;
+        }
+    }

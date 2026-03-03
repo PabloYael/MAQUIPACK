@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilos/registro.css">
+ <link rel="icon" href="img/logopack2.png" type="jpg">
+<title>Registro - MAQUIPACK</title>
+
+
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="logo-section">
+        <img src="img/logopack2.png" alt="Logo" width="100" height="100"> 
+        </div>
+    <div class="form-section">
+        <h1>¡BIENVENIDO!</h1>
+        
+
+        <form id="registroForm" action="php/registro.php" method="post" >
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" require>
+            <input type="tel"  name="telefono" placeholder="Teléfono" require>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" require>
+            <input type="password" id="password" name="password" placeholder="Contraseña" require>
+            <button type="submit">REGISTRARSE</button>
+            <div id="mensaje"></div>
+        </form>
+
+        <div class="login-link">
+            ¿YA TIENES UNA CUENTA? 
+            <a href="login.html">Iniciar sesión</a> 
+
+        </div>
+
+    </div>
+</div>
+
+ <!-- <script src="script/registro.js"></script>  -->
+
+</body>
+</html>

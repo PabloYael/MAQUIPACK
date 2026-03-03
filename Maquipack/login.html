@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilos/login.css">
+ <link rel="icon" href="img/logopack2.png" type="jpg">
+<title>Inicio de sesión - Maquipack</title>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+        <h1>BIENVENIDO</h1>
+        <h2>Administrador</h2>
+        <p>https://www.maquipak.com</p>
+    </div>
+
+    <div class="right-panel">
+        <div class="logo-section">
+        <img src="img/logopack2.png" alt="Logo">
+        
+    </div>
+        <h2>Inicio de sesión</h2>
+
+        <form action="php/login.php" method="post" id="loginForm">
+            <div class="input-group">
+                <label>Nombre del usuario</label>
+                <input type="text" name="usuario" required>
+            </div>
+
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" name="password" required>
+            </div>
+          
+            <button type="submit">Iniciar sesión</button>
+            <div id="mensaje"></div>
+          
+        </form>
+
+        <div class="register">
+
+            No tienes cuenta? <a href="registro.html">REGISTRARSE</a> 
+
+        </div>
+    </div>
+
+</div>
+
+<!-- <script src="script/login.js"></script>  -->
+
+</body>
+</html>

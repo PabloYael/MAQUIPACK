@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#e6e6e6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    display:flex;
+    max-width:1000px;
+    width:100%;
+    gap:40px;
+}
+
+/* PANEL IZQUIERDO */
+.left-panel{
+    flex:1;
+    border-radius:25px;
+    padding:40px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background: linear-gradient(135deg,#2f6bdc,#9333ea);
+}
+
+.left-panel h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.left-panel h2{
+    font-size:22px;
+}
+
+.left-panel p{
+    margin-top:auto;
+    font-size:12px;
+    opacity:0.8;
+}
+
+/* PANEL DERECHO */
+.right-panel{
+    flex:1;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.right-panel img{
+    width:150px;
+    margin-bottom:20px;
+}
+
+.right-panel h2{
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.input-group{
+    text-align:left;
+    margin-bottom:20px;
+}
+
+.input-group label{
+    font-size:14px;
+}
+
+.input-group input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:none;
+    background:#ddd;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(90deg,#9333ea,#2f6bdc);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+.register{
+    margin-top:15px;
+    font-size:14px;
+}
+
+.register span{
+    color:red;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+}

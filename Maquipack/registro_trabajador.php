@@ -1,0 +1,86 @@
+<?php
+require("php/conexion.php");
+
+$sql = "SELECT id_empresa, nombre_empresa FROM empresa";
+$stmt = $conexion->query($sql);
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilos/reg_trab.css">
+ <link rel="icon" href="img/logopack2.png" type="jpg">
+<title>Registro de trabajadores</title>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <div class="logo-section">
+            <center>
+        <img src="img/logopack2.png" alt="Logo" width="100" height="100"> 
+        </center></div>
+        <h1>REGISTRO DE<br>TRABAJADORES</h1>
+        <div class="regresar" onclick="history.back()">Regresar</div>
+    </div>
+
+    <div class="right">
+        <h2>DATOS</h2>
+
+        <form id="registroForm" method="post" action="php/registroTrabajador.php">
+            <input type="text" name="nombre" placeholder="Nombre" require>
+            <input type="text" name="ap_paterno" placeholder="Apellido Paterno" require>
+            <input type="text" name="ap_materno" placeholder="Apellido Materno" require>
+            <input type="text" name="puesto" placeholder="Puesto" require>
+            <input type="text" name="colonia" placeholder="Colonia" require>
+            <input type="text" name="calle" placeholder="Calle" require>
+            <input type="text" name="codigo_postal" placeholder="Codigo Postal" require>
+            <input type="text" name="telefono" placeholder="Teléfono" require>
+            <!--<input type="email" placeholder="Correo electrónico" class="full">-->
+             <select name="id_pago" id="id_pago" onchange="mostrarCuenta()">
+            <option value="">Selecciona el tipo de pago </option>
+            <option value="1">Transferencia</option>
+            <option value="2">Efectivo</option>
+         </select>
+         <div id="cuentaDiv" style="display:none; margin-top:10px;">
+         <label>Número de cuenta:</label>
+            <input type="text" name="numero_cuenta" placeholder="Ingresa el número de cuenta">
+      </div><br>
+        <label for="">Empresa</label>
+     <select name="id_empresa" required>
+        <option value="">Selecciona empresa</option>
+
+        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+        <option value="<?php echo $row['id_empresa']; ?>">
+            <?php echo $row['nombre_empresa']; ?>
+        </option>
+    <?php } ?>
+</select>
+
+            <button type="submit">REGISTRAR</button>
+        </form>
+    </div>
+
+</div>
+  <script>
+function mostrarCuenta() {
+    var pago = document.getElementById("id_pago").value;
+    var cuentaDiv = document.getElementById("cuentaDiv");
+
+    if (pago == "1") {  
+        cuentaDiv.style.display = "block";
+        
+    } else {
+        cuentaDiv.style.display = "none";
+    }
+}
+</script>
+<!-- <script src="script/reg_trab.js"></script> -->
+
+</body>
+</html>
